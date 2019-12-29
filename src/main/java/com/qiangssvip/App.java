@@ -35,7 +35,7 @@ public class App
         /* 4.创建一个Subject实例 */
         Subject subject = SecurityUtils.getSubject();
         /* 5.创建token令牌 */
-        UsernamePasswordToken token = new UsernamePasswordToken("itlike", "12345");
+        UsernamePasswordToken token = new UsernamePasswordToken("itlike", "1234");
         /* 6.用户登录 */
 
         try {
