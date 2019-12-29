@@ -12,7 +12,7 @@ import org.apache.shiro.subject.Subject;
  * Hello world!
  *
  */
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
@@ -35,7 +35,7 @@ public class App
         /* 4.创建一个Subject实例 */
         Subject subject = SecurityUtils.getSubject();
         /* 5.创建token令牌 */
-        UsernamePasswordToken token = new UsernamePasswordToken("itlike", "1234");
+        UsernamePasswordToken token = new UsernamePasswordToken("itlike", "admin");
         /* 6.用户登录 */
 
         try {

@@ -7,6 +7,7 @@ import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
 
 public class Realm extends AuthorizingRealm {
     /* 认证 */
@@ -17,13 +18,13 @@ public class Realm extends AuthorizingRealm {
         String username = (String)token.getPrincipal();
         /* 从数据库中查出用户名和密码 真是中是从数据库中取*/
         String name = "itlike";
-        String password = "1234";
+        String password = "1c417c8ac6596f5dd639f0924d760e43";
 
         if (!name.equals(username)){
             return null;
         }
 
-        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(username, password, this.getName());
+        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(username, password, ByteSource.Util.bytes("jiayan"), this.getName());
         return info;
     }
 
